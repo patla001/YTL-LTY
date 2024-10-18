@@ -26,7 +26,7 @@ const theme = createTheme({
 });
 
 const lightTheme = createTheme({ palette: { mode: 'light' } });
-export default function chatQnA() {
+const chatQnA = () => {
   const [waitingForAI, setWaitingForAI] = useState<Boolean>(false);
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
@@ -264,5 +264,5 @@ export default function chatQnA() {
 //   );
 // };
 
-//export default chatQnA;
+export default chatQnA;
 
