@@ -2,20 +2,12 @@
 import { useChat } from 'ai/react';
 import { useState } from 'react';
 
-import { Paper, Box, Avatar, Button, TextField, Typography } from '@mui/material';
+import { Box, Avatar, Button, TextField, Typography } from '@mui/material';
 import NavBar from '../../components/navigator/navbar';
 import PageContainer from '@/app/(DashboardLayout)/components/container/PageContainer';
 import DashboardCard from '@/app/(DashboardLayout)/components/shared/DashboardCard';
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const darkTheme = createTheme({ palette: { mode: 'dark' } });
-const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body1,
-  textAlign: 'center',
-  color: 'black',
-  height: 60,
-  lineHeight: '60px',
-}));
 
 const theme = createTheme({
   palette: {
@@ -25,7 +17,7 @@ const theme = createTheme({
   },
 });
 
-const lightTheme = createTheme({ palette: { mode: 'light' } });
+
 const chatQnA = () => {
   const [waitingForAI, setWaitingForAI] = useState<Boolean>(false);
   const { messages, input, handleInputChange, handleSubmit } = useChat();
