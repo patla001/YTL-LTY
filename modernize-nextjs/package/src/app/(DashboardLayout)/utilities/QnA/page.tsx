@@ -1,6 +1,6 @@
 'use client';
 import { useChat } from 'ai/react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import { Box, Avatar, Button, TextField, Typography } from '@mui/material';
 import NavBar from '../../components/navigator/navbar';
@@ -18,8 +18,8 @@ const theme = createTheme({
 });
 
 
-const chatQnA = () => {
-  const [waitingForAI, setWaitingForAI] = useState<Boolean>(false);
+const chatQnA: React.FC = () => {
+  const [waitingForAI] = useState<boolean>(false);
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
