@@ -43,6 +43,12 @@ const Menuitems = [
     href: "/utilities/gen-ai-report",
   },
   {
+    id: uniqueId(),
+    title: "Chatbot",
+    icon: IconCopy,
+    href: "/utilities/QnA",
+  },
+  {
     navlabel: true,
     subheader: "Auth",
   },
