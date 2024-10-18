@@ -1,7 +1,7 @@
 'use client';
 import { useChat } from 'ai/react';
 import React, { useState } from 'react';
-
+// update
 import { Box, Avatar, Button, TextField, Typography } from '@mui/material';
 import NavBar from '../../components/navigator/navbar';
 import PageContainer from '@/app/(DashboardLayout)/components/container/PageContainer';
