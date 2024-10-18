@@ -18,7 +18,7 @@ const theme = createTheme({
 });
 
 
-const chatQnA: React.FC = () => {
+const ChatQnA: React.FC = () => {
   const [waitingForAI] = useState<boolean>(false);
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
@@ -256,5 +256,5 @@ const chatQnA: React.FC = () => {
 //   );
 // };
 
-export default chatQnA;
+export default ChatQnA;
 
