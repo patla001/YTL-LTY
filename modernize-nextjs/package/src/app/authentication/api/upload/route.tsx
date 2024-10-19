@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { promises as fs } from 'fs';
 import pdf from "pdf-parse";
-
+//import pdf from "/node_modules/pdf-parse/lib/pdf-parse.js";
 import { getEmbeddingsTransformer, searchArgs } from '@/utils/openai';
 import { MongoDBAtlasVectorSearch } from '@langchain/community/vectorstores/mongodb_atlas';
 import { CharacterTextSplitter } from 'langchain/text_splitter';

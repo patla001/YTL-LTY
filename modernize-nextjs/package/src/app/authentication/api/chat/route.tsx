@@ -1,6 +1,5 @@
 import { StreamingTextResponse, LangChainStream, Message } from 'ai';
 import { ChatOpenAI } from 'langchain/chat_models/openai';
-//import { ChatOpenAI } from 'langchain/openai';
 
 import { ConversationalRetrievalQAChain } from 'langchain/chains';
 import { vectorStore } from '@/utils/openai';
@@ -29,7 +28,8 @@ export async function POST(req: Request) {
             memory: new BufferMemory({
               memoryKey: "chat_history",
             }),
-          })
+            returnSourceDocuments: true,
+          });
         conversationChain.invoke({
             "question": question
         })
@@ -37,6 +37,8 @@ export async function POST(req: Request) {
         return new StreamingTextResponse(stream);
     }
     catch (e) {
-        return NextResponse.json({ message: 'Error Processing' }, { status: 500 });
+        return NextResponse.json([{ message: 'Error Processing' }, { status: 500 },{ message: 'Error Processing' }, { status: 404 }]);
+        
     }
+    
 }

@@ -9,6 +9,7 @@ import {
 } from "@tabler/icons-react";
 
 import { uniqueId } from "lodash";
+import Link from "next/link";
 
 const Menuitems = [
   {
@@ -46,7 +47,8 @@ const Menuitems = [
     id: uniqueId(),
     title: "Chatbot",
     icon: IconCopy,
-    href: "/utilities/QnA",
+    href: "https://ytl-lty-rag.vercel.app/",
+    // href: "/utilities/QnA",
   },
   {
     navlabel: true,
