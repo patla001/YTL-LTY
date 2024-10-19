@@ -8,8 +8,13 @@ const NavBar: React.FC = () => {
       <ol style={{ listStyleType: 'none', margin: 10, padding: 0 }}>
         <img src='/mongoDB.svg' width={"1%"} style={{ display: 'inline', marginLeft: '1rem' }} />
         <li style={{ display: 'inline', marginLeft: '5rem' }}>
-          <Link href="/">
+          <Link href="https://ytl-lty.vercel.app/">
             Home
+          </Link>
+        </li>
+        <li style={{ display: 'inline', marginLeft: '2rem' }}>
+          <Link href="/">
+            Info
           </Link>
         </li>
         <li style={{ display: 'inline', marginLeft: '2rem' }}>
