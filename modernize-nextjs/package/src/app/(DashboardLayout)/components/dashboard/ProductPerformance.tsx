@@ -12,40 +12,40 @@ import DashboardCard from '@/app/(DashboardLayout)//components/shared/DashboardC
 
 const products = [
     {
-        id: "1",
-        name: "Sunil Joshi",
-        post: "Web Designer",
-        pname: "Elite Admin",
+        id: "10/15/2024 16:24",
+        name: "65+",
+        post: "Male",
+        pname: "Social and Physical",
         priority: "Low",
         pbg: "primary.main",
-        budget: "3.9",
+        // budget: "2",
     },
     {
-        id: "2",
-        name: "Andrew McDownland",
-        post: "Project Manager",
-        pname: "Real Homes WP Theme",
+        id: "10/15/2024 21:32",
+        name: "55-59",
+        post: "Female",
+        pname: "Mental Health",
         priority: "Medium",
         pbg: "secondary.main",
-        budget: "24.5",
+        // budget: "24.5",
     },
     {
-        id: "3",
-        name: "Christopher Jamil",
-        post: "Project Manager",
-        pname: "MedicalPro WP Theme",
-        priority: "High",
+        id: "10/15/2024 22:36",
+        name: "18-24",
+        post: "Female",
+        pname: "Doing Workout",
+        priority: "Low",
         pbg: "error.main",
-        budget: "12.8",
+        // budget: "12.8",
     },
     {
-        id: "4",
-        name: "Nirav Joshi",
-        post: "Frontend Engineer",
-        pname: "Hosting Press HTML",
+        id: "10/16/2024 22:12",
+        name: "65+",
+        post: "Male",
+        pname: "Diabetes challenge",
         priority: "Critical",
         pbg: "success.main",
-        budget: "2.4",
+        // budget: "2.4",
     },
 ];
 
@@ -53,7 +53,7 @@ const products = [
 const ProductPerformance = () => {
     return (
 
-        <DashboardCard title="Product Performance">
+        <DashboardCard title="Survey Data">
             <Box sx={{ overflow: 'auto', width: { xs: '280px', sm: 'auto' } }}>
                 <Table
                     aria-label="simple table"
@@ -66,17 +66,17 @@ const ProductPerformance = () => {
                         <TableRow>
                             <TableCell>
                                 <Typography variant="subtitle2" fontWeight={600}>
-                                    Id
+                                    Time
                                 </Typography>
                             </TableCell>
                             <TableCell>
                                 <Typography variant="subtitle2" fontWeight={600}>
-                                    Assigned
+                                    Age
                                 </Typography>
                             </TableCell>
                             <TableCell>
                                 <Typography variant="subtitle2" fontWeight={600}>
-                                    Name
+                                    Challenge
                                 </Typography>
                             </TableCell>
                             <TableCell>
@@ -84,11 +84,7 @@ const ProductPerformance = () => {
                                     Priority
                                 </Typography>
                             </TableCell>
-                            <TableCell align="right">
-                                <Typography variant="subtitle2" fontWeight={600}>
-                                    Budget
-                                </Typography>
-                            </TableCell>
+                            
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -142,9 +138,9 @@ const ProductPerformance = () => {
                                         label={product.priority}
                                     ></Chip>
                                 </TableCell>
-                                <TableCell align="right">
+                                {/* <TableCell align="right">
                                     <Typography variant="h6">${product.budget}k</Typography>
-                                </TableCell>
+                                </TableCell> */}
                             </TableRow>
                         ))}
                     </TableBody>

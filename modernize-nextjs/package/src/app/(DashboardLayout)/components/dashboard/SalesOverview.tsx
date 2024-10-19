@@ -91,25 +91,15 @@ const SalesOverview = () => {
 
     return (
 
-        <DashboardCard title="Chronic Disease Overview" action={
-            <Select
-                labelId="month-dd"
-                id="month-dd"
-                value={month}
-                size="small"
-                onChange={handleChange}
-            >
-                <MenuItem value={1}>March 2023</MenuItem>
-                <MenuItem value={2}>April 2023</MenuItem>
-                <MenuItem value={3}>May 2023</MenuItem>
-            </Select>
-        }>
-            <Chart
+        <DashboardCard title="Chronic Disease Overview" >
+            {/* <Chart
                 options={optionscolumnchart}
                 series={seriescolumnchart}
                 type="bar"
                 height={370} width={"100%"}
-            />
+            /> */}
+            
+                <img src="/images/results/Final_Bar_Plot_Age_group_based_o__model.png" alt="Chronic-Disease-Overview" width="700" height="400" />
         </DashboardCard>
     );
 };
